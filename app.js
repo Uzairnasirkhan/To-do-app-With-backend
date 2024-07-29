@@ -52,6 +52,7 @@ const addTodo = async () => {
         const res = await addDoc(todoCollection, todoObj)
         getTodo()
         console.log("res", res.id)
+        todoInput.value = "";
     } catch (error) {
         console.log("error", error.message)
     }
